@@ -55,10 +55,10 @@
             </objects>
             <point key="canvasLocation" x="140" y="116"/>
         </scene>
-        <!--View Controller-->
+        <!--New Training Controller-->
         <scene sceneID="0oj-Gv-UsR">
             <objects>
-                <viewController id="HHb-eX-gSr" sceneMemberID="viewController">
+                <viewController id="HHb-eX-gSr" customClass="NewTrainingController" customModule="running" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ezg-If-cs2"/>
                         <viewControllerLayoutGuide type="bottom" id="E8P-PB-iem"/>
