@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,30 +16,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xdt-id-kBE">
-                                <rect key="frame" x="26" y="177" width="234" height="30"/>
-                                <state key="normal" title="Historique des entrainements">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VDy-1t-S1Z">
+                                <rect key="frame" x="160" y="146" width="250" height="44"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Démarer un nouvel entrainement">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="HHb-eX-gSr" kind="show" id="65V-YU-cak"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VDy-1t-S1Z">
-                                <rect key="frame" x="26" y="63" width="250" height="44"/>
-                                <state key="normal" title="Démarer un nouvel entrainement">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Running" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nrc-sw-slJ">
+                                <rect key="frame" x="251" y="28" width="98" height="45"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xdt-id-kBE">
+                                <rect key="frame" x="168" y="279" width="234" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Historique des entrainements">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="VDy-1t-S1Z" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="43" id="2zp-KH-lzX"/>
-                            <constraint firstItem="Xdt-id-kBE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="157" id="JN3-d9-iUg"/>
-                            <constraint firstItem="Xdt-id-kBE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="f9e-oS-1Kl"/>
-                            <constraint firstItem="VDy-1t-S1Z" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="q6J-eo-2Ep"/>
+                            <constraint firstAttribute="centerY" secondItem="Xdt-id-kBE" secondAttribute="centerY" constant="6" id="5V6-2a-FOx"/>
+                            <constraint firstAttribute="centerY" secondItem="nrc-sw-slJ" secondAttribute="centerY" constant="249.5" id="Nio-c3-Fyg"/>
+                            <constraint firstAttribute="centerX" secondItem="Xdt-id-kBE" secondAttribute="centerX" constant="15" id="R4R-rI-uUB"/>
+                            <constraint firstAttribute="centerX" secondItem="nrc-sw-slJ" secondAttribute="centerX" id="Whf-kr-BXy"/>
+                            <constraint firstAttribute="centerY" secondItem="VDy-1t-S1Z" secondAttribute="centerY" constant="132" id="eQ7-8x-6KW"/>
+                            <constraint firstAttribute="centerX" secondItem="VDy-1t-S1Z" secondAttribute="centerX" constant="15" id="taR-An-c2w"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="140" y="116"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="0oj-Gv-UsR">
