@@ -55,10 +55,10 @@
             </objects>
             <point key="canvasLocation" x="140" y="116"/>
         </scene>
-        <!--View Controller-->
+        <!--New Training Controller-->
         <scene sceneID="0oj-Gv-UsR">
             <objects>
-                <viewController id="HHb-eX-gSr" sceneMemberID="viewController">
+                <viewController id="HHb-eX-gSr" customClass="NewTrainingController" customModule="running" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ezg-If-cs2"/>
                         <viewControllerLayoutGuide type="bottom" id="E8P-PB-iem"/>
@@ -109,12 +109,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ufX-dF-d9W">
-                                <rect key="frame" x="277" y="481" width="64" height="30"/>
-                                <state key="normal" title="Démarrer">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zTl-Hk-0tH">
                                 <rect key="frame" x="205" y="508" width="43" height="30"/>
                                 <state key="normal" title="Pause">
@@ -139,6 +133,12 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ufX-dF-d9W">
+                                <rect key="frame" x="277" y="481" width="64" height="30"/>
+                                <state key="normal" title="Démarrer">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>

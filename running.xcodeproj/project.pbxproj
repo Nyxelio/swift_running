@@ -13,6 +13,7 @@
 		8BB45C391ADC09830009A844 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BB45C381ADC09830009A844 /* Images.xcassets */; };
 		8BB45C3C1ADC09830009A844 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BB45C3A1ADC09830009A844 /* LaunchScreen.xib */; };
 		8BB45C481ADC09830009A844 /* runningTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB45C471ADC09830009A844 /* runningTests.swift */; };
+		8BB45C551ADC257F0009A844 /* NewTrainingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB45C541ADC257F0009A844 /* NewTrainingController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		8BB45C411ADC09830009A844 /* runningTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = runningTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BB45C461ADC09830009A844 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8BB45C471ADC09830009A844 /* runningTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = runningTests.swift; sourceTree = "<group>"; };
+		8BB45C541ADC257F0009A844 /* NewTrainingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewTrainingController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,9 +79,10 @@
 		8BB45C2E1ADC09830009A844 /* running */ = {
 			isa = PBXGroup;
 			children = (
+				8BB45C531ADC252C0009A844 /* Controllers */,
+				8BB45C521ADC25250009A844 /* Views */,
+				8BB45C511ADC251D0009A844 /* Models */,
 				8BB45C311ADC09830009A844 /* AppDelegate.swift */,
-				8BB45C331ADC09830009A844 /* ViewController.swift */,
-				8BB45C351ADC09830009A844 /* Main.storyboard */,
 				8BB45C381ADC09830009A844 /* Images.xcassets */,
 				8BB45C3A1ADC09830009A844 /* LaunchScreen.xib */,
 				8BB45C2F1ADC09830009A844 /* Supporting Files */,
@@ -110,6 +113,30 @@
 				8BB45C461ADC09830009A844 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8BB45C511ADC251D0009A844 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		8BB45C521ADC25250009A844 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8BB45C351ADC09830009A844 /* Main.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		8BB45C531ADC252C0009A844 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8BB45C331ADC09830009A844 /* ViewController.swift */,
+				8BB45C541ADC257F0009A844 /* NewTrainingController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,6 +239,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BB45C551ADC257F0009A844 /* NewTrainingController.swift in Sources */,
 				8BB45C341ADC09830009A844 /* ViewController.swift in Sources */,
 				8BB45C321ADC09830009A844 /* AppDelegate.swift in Sources */,
 			);
