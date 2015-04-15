@@ -67,60 +67,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temps:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YEu-Fu-dt8">
-                                <rect key="frame" x="135" y="92" width="56" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Temps:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YEu-Fu-dt8">
+                                <rect key="frame" x="134" y="133" width="68" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OK7-H0-cEE">
-                                <rect key="frame" x="360" y="92" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OK7-H0-cEE">
+                                <rect key="frame" x="354" y="138" width="75" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZIZ-qc-2ru">
-                                <rect key="frame" x="135" y="153" width="72" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Distance:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZIZ-qc-2ru">
+                                <rect key="frame" x="134" y="198" width="88" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vitesse:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t0L-JQ-IN9">
-                                <rect key="frame" x="135" y="216" width="60" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Vitesse:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t0L-JQ-IN9">
+                                <rect key="frame" x="134" y="262" width="72" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cV3-xB-qo9">
-                                <rect key="frame" x="360" y="153" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cV3-xB-qo9">
+                                <rect key="frame" x="354" y="196" width="51" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WEP-or-aGd">
-                                <rect key="frame" x="360" y="216" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WEP-or-aGd">
+                                <rect key="frame" x="354" y="260" width="60" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ufX-dF-d9W">
-                                <rect key="frame" x="243" y="254" width="91" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="126" y="368" width="91" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Démarrer">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WoG-cv-W6K">
-                                <rect key="frame" x="135" y="314" width="65" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Pause">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <connections>
+                                    <action selector="GoTimer:" destination="HHb-eX-gSr" eventType="touchUpInside" id="kir-B8-8Gh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ig-Hx-ERe">
-                                <rect key="frame" x="360" y="314" width="75" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Arrêter">
+                                <rect key="frame" x="354" y="368" width="81" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Terminer">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -128,36 +124,50 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Démarrer un nouvel entraînement" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="czN-CC-TlU">
-                                <rect key="frame" x="135" y="33" width="330" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <rect key="frame" x="125" y="53" width="350" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Far-Kt-hYG">
+                                <rect key="frame" x="265" y="444" width="70" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Retour">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="G8N-au-ppf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="ZIZ-qc-2ru" secondAttribute="centerX" constant="129" id="1RV-rr-SSp"/>
-                            <constraint firstAttribute="centerY" secondItem="WoG-cv-W6K" secondAttribute="centerY" constant="-29" id="6ib-5m-Qln"/>
-                            <constraint firstAttribute="centerY" secondItem="cV3-xB-qo9" secondAttribute="centerY" constant="136.5" id="7fT-uM-9z8"/>
-                            <constraint firstAttribute="centerX" secondItem="ufX-dF-d9W" secondAttribute="centerX" constant="11.5" id="CMz-hY-fxx"/>
-                            <constraint firstAttribute="centerY" secondItem="OK7-H0-cEE" secondAttribute="centerY" constant="197.5" id="CUK-mf-oB6"/>
-                            <constraint firstAttribute="centerX" secondItem="3ig-Hx-ERe" secondAttribute="centerX" constant="-97.5" id="JIw-vx-cqH"/>
-                            <constraint firstAttribute="centerY" secondItem="ZIZ-qc-2ru" secondAttribute="centerY" constant="136.5" id="KLZ-oq-Yny"/>
-                            <constraint firstAttribute="centerX" secondItem="WoG-cv-W6K" secondAttribute="centerX" constant="132.5" id="Kup-e9-qIc"/>
-                            <constraint firstAttribute="centerX" secondItem="t0L-JQ-IN9" secondAttribute="centerX" constant="135" id="NSN-Ho-WXT"/>
-                            <constraint firstAttribute="centerX" secondItem="WEP-or-aGd" secondAttribute="centerX" constant="-81" id="Pgq-bG-aVp"/>
-                            <constraint firstAttribute="centerX" secondItem="YEu-Fu-dt8" secondAttribute="centerX" constant="137" id="QCm-2h-5WW"/>
-                            <constraint firstAttribute="centerY" secondItem="3ig-Hx-ERe" secondAttribute="centerY" constant="-29" id="TIS-VF-yvs"/>
-                            <constraint firstAttribute="centerY" secondItem="YEu-Fu-dt8" secondAttribute="centerY" constant="197.5" id="WLL-lL-XKH"/>
-                            <constraint firstAttribute="centerX" secondItem="cV3-xB-qo9" secondAttribute="centerX" constant="-81" id="djD-Zz-4DD"/>
-                            <constraint firstAttribute="centerY" secondItem="ufX-dF-d9W" secondAttribute="centerY" constant="31" id="eH7-M9-2Gd"/>
-                            <constraint firstAttribute="centerY" secondItem="czN-CC-TlU" secondAttribute="centerY" constant="256.5" id="icy-Tf-Lx1"/>
-                            <constraint firstAttribute="centerY" secondItem="WEP-or-aGd" secondAttribute="centerY" constant="73.5" id="kNe-Yj-KMm"/>
-                            <constraint firstAttribute="centerY" secondItem="t0L-JQ-IN9" secondAttribute="centerY" constant="73.5" id="kXy-ll-Dqe"/>
+                            <constraint firstAttribute="centerY" secondItem="t0L-JQ-IN9" secondAttribute="centerY" constant="27.5" id="4mk-4G-hf4"/>
+                            <constraint firstAttribute="centerY" secondItem="Far-Kt-hYG" secondAttribute="centerY" constant="-159" id="5ep-j0-2zJ"/>
+                            <constraint firstAttribute="centerY" secondItem="YEu-Fu-dt8" secondAttribute="centerY" constant="151" id="7Ue-Yv-Ih6"/>
+                            <constraint firstAttribute="centerX" secondItem="t0L-JQ-IN9" secondAttribute="centerX" constant="130" id="9Sl-9f-iBw"/>
+                            <constraint firstAttribute="centerY" secondItem="ZIZ-qc-2ru" secondAttribute="centerY" constant="91.5" id="E9k-Te-7Uj"/>
+                            <constraint firstAttribute="centerY" secondItem="OK7-H0-cEE" secondAttribute="centerY" constant="151.5" id="I1a-ne-hZ9"/>
+                            <constraint firstAttribute="centerX" secondItem="Far-Kt-hYG" secondAttribute="centerX" id="I90-JG-xa8"/>
+                            <constraint firstAttribute="centerY" secondItem="cV3-xB-qo9" secondAttribute="centerY" constant="92.5" id="S5b-1I-RMq"/>
+                            <constraint firstAttribute="centerX" secondItem="YEu-Fu-dt8" secondAttribute="centerX" constant="132" id="SC2-Bb-42l"/>
+                            <constraint firstAttribute="centerX" secondItem="ZIZ-qc-2ru" secondAttribute="centerX" constant="122" id="SXn-h7-CEg"/>
+                            <constraint firstAttribute="centerY" secondItem="3ig-Hx-ERe" secondAttribute="centerY" constant="-83" id="VyR-S9-3ki"/>
+                            <constraint firstAttribute="centerY" secondItem="WEP-or-aGd" secondAttribute="centerY" constant="29.5" id="cRC-G5-DA3"/>
+                            <constraint firstAttribute="centerX" secondItem="3ig-Hx-ERe" secondAttribute="centerX" constant="-94.5" id="dQU-cP-z7g"/>
+                            <constraint firstAttribute="centerY" secondItem="ufX-dF-d9W" secondAttribute="centerY" constant="-83" id="diD-Ft-zHh"/>
+                            <constraint firstAttribute="centerY" secondItem="czN-CC-TlU" secondAttribute="centerY" constant="236.5" id="gUU-7O-W4k"/>
+                            <constraint firstAttribute="centerX" secondItem="OK7-H0-cEE" secondAttribute="centerX" constant="-91.5" id="kze-zG-dZq"/>
+                            <constraint firstAttribute="centerX" secondItem="ufX-dF-d9W" secondAttribute="centerX" constant="128.5" id="maG-il-y7e"/>
+                            <constraint firstAttribute="centerX" secondItem="WEP-or-aGd" secondAttribute="centerX" constant="-84" id="rf0-QV-l5K"/>
                             <constraint firstAttribute="centerX" secondItem="czN-CC-TlU" secondAttribute="centerX" id="tCY-eh-wzf"/>
-                            <constraint firstAttribute="centerX" secondItem="OK7-H0-cEE" secondAttribute="centerX" constant="-81" id="wa5-p2-wuJ"/>
+                            <constraint firstAttribute="centerX" secondItem="cV3-xB-qo9" secondAttribute="centerX" constant="-79.5" id="uEa-zs-cAG"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btn_Start" destination="ufX-dF-d9W" id="hXa-Q8-jxQ"/>
+                        <outlet property="lbl_Timer" destination="OK7-H0-cEE" id="etU-4T-Y2u"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="63f-x8-vIz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
