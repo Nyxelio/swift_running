@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import CoreLocation
 
-class NewTrainingController: UIViewController {
+class NewTrainingController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var lbl_Timer: UILabel!
     @IBOutlet weak var btn_Start: UIButton!
+    @IBOutlet weak var lbl_Distance: UILabel!
+    @IBOutlet weak var lbl_Vitesse: UILabel!
     
     //Constante: temps initial
     let initSec = 60
@@ -20,7 +23,6 @@ class NewTrainingController: UIViewController {
     var sec:Int = 00
     var min:Int = 00
     var heure:Int = 00
-    
    
     //initialisation du timer
     var timer:NSTimer = NSTimer()
@@ -29,10 +31,25 @@ class NewTrainingController: UIViewController {
     var exist:Bool = false
     var work:Bool = false
     
+    //Manager de la géolocalisation
+    let locationManager = CLLocationManager()
+    
+    //Tableau qui enregistre les position
+    var locationsList :[CLLocationCoordinate2D] = []
+    
+    //Variable qui recupere la distance
+    var distance:Float = 0
+    
+    //Variable qui récupere la vitesse
+    var vitesse:Float=0
+    
+    //Si le bouton démarrer est actionné
     @IBAction func GoTimer(sender: UIButton)
     {
+        
         if(!exist) //Si il existe pas
         {
+            
             //On lance le timer
             TimerStart()
             
@@ -42,6 +59,8 @@ class NewTrainingController: UIViewController {
             
             //Changer le texte du UIBouton
             btn_Start.setTitle("Pause", forState: .Normal)
+            //On lance l'actulisation des données
+            locationManager.startUpdatingLocation()
             
         }
         else
@@ -63,9 +82,32 @@ class NewTrainingController: UIViewController {
         }
     }
     
+    
+    //Si on action le bouton terminer
+    @IBAction func terminer(sender: AnyObject)
+    {
+        //On stop l'actualisation des données de géolocalisées
+        locationManager.stopUpdatingLocation()
+        timer.invalidate()
+        //self.performSegueWithIdentifier("Enregistrement", sender: sender)
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        // Ask for Authorisation from the User.
+        self.locationManager.requestAlwaysAuthorization()
+        
+        // For use in foreground
+        self.locationManager.requestWhenInUseAuthorization()
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            
+            
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -87,7 +129,7 @@ class NewTrainingController: UIViewController {
         {
             sec++
             
-            AffichageChrono(heure, minIn: min, secIn: sec)
+             lbl_Timer.text = AffichageChrono(heure, minIn: min, secIn: sec)
             
         }
         else
@@ -96,7 +138,7 @@ class NewTrainingController: UIViewController {
             {
                 sec = 0
                 min++
-                AffichageChrono(heure, minIn: min, secIn: sec)
+                lbl_Timer.text = AffichageChrono(heure, minIn: min, secIn: sec)
             }
             else
             {
@@ -105,13 +147,15 @@ class NewTrainingController: UIViewController {
                     sec = 0
                     min = 0
                     heure++
-                    AffichageChrono(heure, minIn: min, secIn: sec)
+                    
+                    lbl_Timer.text = AffichageChrono(heure, minIn: min, secIn: sec)
                 }
             }
         }
     }
     
-    func AffichageChrono(heureIn:Int, minIn:Int, secIn:Int)
+    //Fonction permettant d'afficher le timer
+    func AffichageChrono(heureIn:Int, minIn:Int, secIn:Int) -> String
     {
         var stringSec:String = ""
         var stringMin:String = ""
@@ -144,6 +188,64 @@ class NewTrainingController: UIViewController {
             stringHeure = String(heureIn)
         }
         
-        lbl_Timer.text = stringHeure+":"+stringMin+":"+stringSec
+        return ("\(stringHeure):\(stringMin):\(stringSec)")
+    }
+    
+    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+        
+        var locValue:CLLocationCoordinate2D = manager.location.coordinate
+        
+        //Stockage des données
+        locationsList.append(locValue)
+        
+        //Affichage position de départ
+        var locDepart:CLLocationCoordinate2D = locationsList[0]
+        
+        
+        //Affichage de la distance
+        if(locationsList.count > 2)
+        {
+            
+            distance += CalculDistance(locationsList[locationsList.count - 2], to: locValue)
+            lbl_Distance.text  = "\((round(1000 * distance) / 1000)) Km"
+            
+        }
+        else
+        {
+            if(locationsList.count == 2)
+            {
+                distance += CalculDistance(locDepart, to: locValue)
+                
+                lbl_Distance.text = "\((round(1000 * distance) / 1000)) Km"
+            }
+        }
+        
+        
+        //VITESSE
+        vitesse = (manager.location.speed.description as NSString).floatValue * 1.6093
+        lbl_Vitesse.text = "\(vitesse) Km/h"
+        
+        
+    }
+    
+    func CalculDistance(from:CLLocationCoordinate2D,to:CLLocationCoordinate2D) -> Float
+    {
+        let from = CLLocation(latitude: from.latitude, longitude: from.longitude)
+        let to = CLLocation(latitude: to.latitude, longitude: to.longitude)
+        return (from.distanceFromLocation(to).description as NSString).floatValue * 0.001
+    }
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        
+        if(segue.identifier == "Enregistrement")
+        {
+            var destViewController : ViewEnregistrement = segue.destinationViewController as ViewEnregistrement
+            destViewController.tempsText = AffichageChrono(heure, minIn: min, secIn: sec)
+            destViewController.distanceText = "\(distance)"
+            destViewController.vitesseText = "\(vitesse)"
+            
+        }
     }
 }
