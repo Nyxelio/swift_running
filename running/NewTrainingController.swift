@@ -94,10 +94,6 @@ class NewTrainingController: UIViewController, CLLocationManagerDelegate {
         locationManager.stopUpdatingLocation()
         timer.invalidate()
         
-
-        
-
-
     }
     
     override func viewDidLoad() {
@@ -222,13 +218,12 @@ class NewTrainingController: UIViewController, CLLocationManagerDelegate {
             if(locationsList.count == 2)
             {
                 distance += CalculDistance(locDepart, to: locValue)
-                
                 lbl_Distance.text = "\((round(1000 * distance) / 1000)) Km"
             }
         }
         
         
-        //VITESSE
+        //Calcule de vitesse
         vitesse = (manager.location.speed.description as NSString).floatValue * 1.6093
         lbl_Vitesse.text = "\(vitesse) Km/h"
         vitesseList.append(vitesse)
@@ -241,7 +236,7 @@ class NewTrainingController: UIViewController, CLLocationManagerDelegate {
     {
         let from = CLLocation(latitude: from.latitude, longitude: from.longitude)
         let to = CLLocation(latitude: to.latitude, longitude: to.longitude)
-        return (from.distanceFromLocation(to).description as NSString).floatValue * 0.001
+        return (from.distanceFromLocation(to).description as NSString).floatValue / 1000
     }
     
     func CalculVitesse()
@@ -272,13 +267,16 @@ class NewTrainingController: UIViewController, CLLocationManagerDelegate {
         
         if(segue.identifier == "Enregistrement")
         {
-           CalculVitesse()
+            CalculVitesse()
+            distance = (round(1000 * distance) / 1000)
             
             var destViewController : ViewEnregistrement = segue.destinationViewController as ViewEnregistrement
             destViewController.tempsText = AffichageChrono(heure, minIn: min, secIn: sec)
-            destViewController.distanceText = "\(distance)"
+            destViewController.distanceText = "\(distance) Km"
             destViewController.vitesseText = "\(vitesseMoy) Km/h"
             destViewController.vitesseMaxText = "\(vitesseMax) Km/h"
+            destViewController.tabCoordonnées = locationsList
+            
             
         }
     }
