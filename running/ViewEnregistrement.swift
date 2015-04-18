@@ -70,37 +70,6 @@ class ViewEnregistrement: UIViewController {
             
             status.text = "Enregistrement effectué"
             
-            read()
         }
     }
-    
-    func read()
-    {
-        let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
-        let managedContext = appDelegate.managedObjectContext!
-        let fetchRequest = NSFetchRequest(entityName: "Training")
-        
-        var error: NSError?
-        let fetchedResults = managedContext.executeFetchRequest(fetchRequest, error: &error)
-            as [NSManagedObject]?
-        
-        if let results = fetchedResults
-        {
-            for (var i=0; i < results.count; i++)
-            {
-                let single_result = results[i]
-                let duration = single_result.valueForKey("duration") as String
-                let distance = single_result.valueForKey("distance") as String
-                let speed = single_result.valueForKey("speed") as String
-
-
-                println("duration \(duration), distance \(distance), speed \(speed)")
-                
-            }
-        }
-        else
-        {
-            println("cannot read")
-        }
-    }
-}
+  }

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8BA8EE1D1AE2E22A0079CAEC /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA8EE1C1AE2E22A0079CAEC /* HistoryViewController.swift */; };
+		8BA8EE211AE2E8620079CAEC /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA8EE201AE2E8620079CAEC /* HistoryViewController.swift */; };
 		8BB1ACCE1AE1148500928286 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BB1ACCD1AE1148500928286 /* MapKit.framework */; };
 		8BB1ACD01AE114B700928286 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BB1ACCF1AE114B700928286 /* CoreLocation.framework */; };
 		8BB1ACD21AE13B6B00928286 /* ViewEnregistrement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB1ACD11AE13B6B00928286 /* ViewEnregistrement.swift */; };
@@ -34,7 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8BA8EE1C1AE2E22A0079CAEC /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		8BA8EE201AE2E8620079CAEC /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		8BB1ACCD1AE1148500928286 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		8BB1ACCF1AE114B700928286 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		8BB1ACD11AE13B6B00928286 /* ViewEnregistrement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewEnregistrement.swift; sourceTree = "<group>"; };
@@ -155,9 +155,9 @@
 			isa = PBXGroup;
 			children = (
 				8BB45C331ADC09830009A844 /* ViewController.swift */,
+				8BA8EE201AE2E8620079CAEC /* HistoryViewController.swift */,
 				8BB45C541ADC257F0009A844 /* NewTrainingController.swift */,
 				8BB1ACD11AE13B6B00928286 /* ViewEnregistrement.swift */,
-				8BA8EE1C1AE2E22A0079CAEC /* HistoryViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -269,7 +269,7 @@
 				8BB45C321ADC09830009A844 /* AppDelegate.swift in Sources */,
 				8BB37B731AE2A55900344BEB /* runningapp.xcdatamodeld in Sources */,
 				8BB37B7F1AE2BDB600344BEB /* Location.swift in Sources */,
-				8BA8EE1D1AE2E22A0079CAEC /* HistoryViewController.swift in Sources */,
+				8BA8EE211AE2E8620079CAEC /* HistoryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
