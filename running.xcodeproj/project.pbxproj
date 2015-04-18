@@ -10,6 +10,9 @@
 		8BB1ACCE1AE1148500928286 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BB1ACCD1AE1148500928286 /* MapKit.framework */; };
 		8BB1ACD01AE114B700928286 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BB1ACCF1AE114B700928286 /* CoreLocation.framework */; };
 		8BB1ACD21AE13B6B00928286 /* ViewEnregistrement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB1ACD11AE13B6B00928286 /* ViewEnregistrement.swift */; };
+		8BB37B731AE2A55900344BEB /* runningapp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8BB37B711AE2A55900344BEB /* runningapp.xcdatamodeld */; };
+		8BB37B7D1AE2BDB500344BEB /* Training.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB37B7C1AE2BDB500344BEB /* Training.swift */; };
+		8BB37B7F1AE2BDB600344BEB /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB37B7E1AE2BDB600344BEB /* Location.swift */; };
 		8BB45C321ADC09830009A844 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB45C311ADC09830009A844 /* AppDelegate.swift */; };
 		8BB45C341ADC09830009A844 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB45C331ADC09830009A844 /* ViewController.swift */; };
 		8BB45C371ADC09830009A844 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BB45C351ADC09830009A844 /* Main.storyboard */; };
@@ -33,6 +36,9 @@
 		8BB1ACCD1AE1148500928286 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		8BB1ACCF1AE114B700928286 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		8BB1ACD11AE13B6B00928286 /* ViewEnregistrement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewEnregistrement.swift; sourceTree = "<group>"; };
+		8BB37B721AE2A55900344BEB /* runningapp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = runningapp.xcdatamodel; sourceTree = "<group>"; };
+		8BB37B7C1AE2BDB500344BEB /* Training.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Training.swift; path = running/Training.swift; sourceTree = "<group>"; };
+		8BB37B7E1AE2BDB600344BEB /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Location.swift; path = running/Location.swift; sourceTree = "<group>"; };
 		8BB45C2C1ADC09830009A844 /* running.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = running.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BB45C301ADC09830009A844 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8BB45C311ADC09830009A844 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +75,9 @@
 		8BB45C231ADC09830009A844 = {
 			isa = PBXGroup;
 			children = (
+				8BB37B7E1AE2BDB600344BEB /* Location.swift */,
+				8BB37B7C1AE2BDB500344BEB /* Training.swift */,
+				8BB37B711AE2A55900344BEB /* runningapp.xcdatamodeld */,
 				8BB1ACCF1AE114B700928286 /* CoreLocation.framework */,
 				8BB1ACCD1AE1148500928286 /* MapKit.framework */,
 				8BB45C2E1ADC09830009A844 /* running */,
@@ -251,9 +260,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BB45C551ADC257F0009A844 /* NewTrainingController.swift in Sources */,
+				8BB37B7D1AE2BDB500344BEB /* Training.swift in Sources */,
 				8BB45C341ADC09830009A844 /* ViewController.swift in Sources */,
 				8BB1ACD21AE13B6B00928286 /* ViewEnregistrement.swift in Sources */,
 				8BB45C321ADC09830009A844 /* AppDelegate.swift in Sources */,
+				8BB37B731AE2A55900344BEB /* runningapp.xcdatamodeld in Sources */,
+				8BB37B7F1AE2BDB600344BEB /* Location.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,6 +471,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8BB37B711AE2A55900344BEB /* runningapp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8BB37B721AE2A55900344BEB /* runningapp.xcdatamodel */,
+			);
+			currentVersion = 8BB37B721AE2A55900344BEB /* runningapp.xcdatamodel */;
+			path = runningapp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 8BB45C241ADC09830009A844 /* Project object */;
 }
