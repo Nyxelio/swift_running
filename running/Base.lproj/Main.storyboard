@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -104,12 +103,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OK7-H0-cEE">
-                                <rect key="frame" x="225" y="97" width="150" height="42"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Vitesse" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t0L-JQ-IN9">
                                 <rect key="frame" x="376" y="204" width="72" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
@@ -177,6 +170,12 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OK7-H0-cEE">
+                                <rect key="frame" x="225" y="97" width="150" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -185,16 +184,16 @@
                             <constraint firstAttribute="centerX" secondItem="3ig-Hx-ERe" secondAttribute="centerX" constant="-0.5" id="4cA-7b-1YC"/>
                             <constraint firstAttribute="centerY" secondItem="t0L-JQ-IN9" secondAttribute="centerY" constant="27.5" id="4mk-4G-hf4"/>
                             <constraint firstAttribute="centerX" secondItem="t0L-JQ-IN9" secondAttribute="centerX" constant="130" id="9Sl-9f-iBw"/>
+                            <constraint firstAttribute="centerY" secondItem="OK7-H0-cEE" secondAttribute="centerY" constant="182" id="AeS-hV-Urz"/>
                             <constraint firstAttribute="centerY" secondItem="Far-Kt-hYG" secondAttribute="centerY" constant="-217" id="D5C-Ka-5lV"/>
+                            <constraint firstAttribute="centerX" secondItem="OK7-H0-cEE" secondAttribute="centerX" id="DE1-LI-ZmC"/>
                             <constraint firstAttribute="centerY" secondItem="ZIZ-qc-2ru" secondAttribute="centerY" constant="91.5" id="E9k-Te-7Uj"/>
                             <constraint firstAttribute="centerX" secondItem="Far-Kt-hYG" secondAttribute="centerX" constant="-0.5" id="EvW-Oy-e9O"/>
-                            <constraint firstAttribute="centerY" secondItem="OK7-H0-cEE" secondAttribute="centerY" constant="151.5" id="I1a-ne-hZ9"/>
                             <constraint firstAttribute="centerX" secondItem="ZIZ-qc-2ru" secondAttribute="centerX" constant="122" id="SXn-h7-CEg"/>
                             <constraint firstAttribute="centerX" secondItem="cV3-xB-qo9" secondAttribute="centerX" constant="-91.5" id="Wi8-k1-IbS"/>
                             <constraint firstAttribute="centerY" secondItem="czN-CC-TlU" secondAttribute="centerY" constant="236.5" id="gUU-7O-W4k"/>
                             <constraint firstAttribute="centerX" secondItem="WEP-or-aGd" secondAttribute="centerX" constant="-91.5" id="gre-2s-sYs"/>
                             <constraint firstAttribute="centerX" secondItem="ufX-dF-d9W" secondAttribute="centerX" constant="-0.5" id="hqA-oc-ahT"/>
-                            <constraint firstAttribute="centerX" secondItem="OK7-H0-cEE" secondAttribute="centerX" constant="-91.5" id="kze-zG-dZq"/>
                             <constraint firstAttribute="centerY" secondItem="cV3-xB-qo9" secondAttribute="centerY" constant="92.5" id="s4p-AP-PHb"/>
                             <constraint firstAttribute="centerX" secondItem="czN-CC-TlU" secondAttribute="centerX" id="tCY-eh-wzf"/>
                             <constraint firstAttribute="centerY" secondItem="3ig-Hx-ERe" secondAttribute="centerY" constant="-130" id="ycc-Ij-2aX"/>
@@ -272,7 +271,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="AmN-IW-4cE">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="AmN-IW-4cE">
                                 <rect key="frame" x="101" y="75" width="399" height="281"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IDi-UI-ycv">
@@ -290,14 +289,14 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Vitesse max:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aCa-2y-QRM">
-                                <rect key="frame" x="187" y="492" width="106" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FYJ-Th-5TZ">
+                                <rect key="frame" x="353" y="492" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FYJ-Th-5TZ">
-                                <rect key="frame" x="353" y="492" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Vitesse max:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aCa-2y-QRM">
+                                <rect key="frame" x="187" y="492" width="106" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -305,30 +304,29 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="AmN-IW-4cE" firstAttribute="top" secondItem="Sxb-UT-1gN" secondAttribute="bottom" constant="55" id="1c0-Lr-6Wj"/>
                             <constraint firstAttribute="centerX" secondItem="PyG-cc-b3S" secondAttribute="centerX" constant="40.5" id="4he-2Q-F6u"/>
                             <constraint firstAttribute="centerY" secondItem="sbP-y3-4Uc" secondAttribute="centerY" constant="-126.5" id="4y0-6e-cSU"/>
                             <constraint firstAttribute="centerY" secondItem="jO4-GC-0zW" secondAttribute="centerY" constant="-242" id="5mr-Mq-g6f"/>
                             <constraint firstAttribute="centerX" secondItem="IDi-UI-ycv" secondAttribute="centerX" constant="-74" id="6zf-hG-kkW"/>
                             <constraint firstAttribute="centerY" secondItem="2uP-Ru-9yg" secondAttribute="centerY" constant="-84.5" id="AJ1-s5-gF4"/>
-                            <constraint firstAttribute="centerX" secondItem="jO4-GC-0zW" secondAttribute="centerX" id="BEj-QU-Ogb"/>
                             <constraint firstAttribute="centerX" secondItem="Wav-cP-kKp" secondAttribute="centerX" constant="-0.5" id="EzJ-eG-rDv"/>
                             <constraint firstAttribute="centerY" secondItem="oot-uY-27G" secondAttribute="centerY" constant="-215.5" id="H7V-zH-2Ew"/>
                             <constraint firstAttribute="centerX" secondItem="AmN-IW-4cE" secondAttribute="centerX" constant="-0.5" id="IAh-tr-fe6"/>
                             <constraint firstAttribute="centerX" secondItem="aCa-2y-QRM" secondAttribute="centerX" constant="60" id="Jqm-PP-kUP"/>
                             <constraint firstAttribute="centerX" secondItem="TsL-uM-dEx" secondAttribute="centerX" constant="-74" id="LjN-P0-57y"/>
                             <constraint firstAttribute="centerY" secondItem="Wav-cP-kKp" secondAttribute="centerY" constant="261.5" id="NGO-41-BDc"/>
+                            <constraint firstAttribute="centerY" secondItem="FYJ-Th-5TZ" secondAttribute="centerY" constant="-202.5" id="Qad-cf-Bkt"/>
                             <constraint firstAttribute="centerX" secondItem="2uP-Ru-9yg" secondAttribute="centerX" constant="-74" id="Sri-eZ-sig"/>
                             <constraint firstAttribute="centerX" secondItem="sbP-y3-4Uc" secondAttribute="centerX" constant="-74" id="UMS-qQ-bCr"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="AmN-IW-4cE" secondAttribute="trailing" constant="84" id="XWu-ON-TR8"/>
                             <constraint firstAttribute="centerY" secondItem="AmN-IW-4cE" secondAttribute="centerY" constant="84.5" id="Z5X-lx-oTr"/>
                             <constraint firstAttribute="centerY" secondItem="aCa-2y-QRM" secondAttribute="centerY" constant="-202.5" id="ZA2-69-TKx"/>
-                            <constraint firstItem="AmN-IW-4cE" firstAttribute="leading" secondItem="CD3-w2-3dv" secondAttribute="leadingMargin" constant="85" id="apA-jS-3NK"/>
                             <constraint firstAttribute="centerY" secondItem="TsL-uM-dEx" secondAttribute="centerY" constant="-167.5" id="eTm-5e-vZP"/>
+                            <constraint firstAttribute="centerX" secondItem="FYJ-Th-5TZ" secondAttribute="centerX" constant="-74" id="eTr-59-r8f"/>
                             <constraint firstAttribute="centerY" secondItem="pW5-b0-2sR" secondAttribute="centerY" constant="-84.5" id="eYh-Oy-QbV"/>
                             <constraint firstAttribute="centerX" secondItem="MZR-FG-ZVi" secondAttribute="centerX" constant="77" id="g9Q-fj-qPT"/>
                             <constraint firstAttribute="centerX" secondItem="pW5-b0-2sR" secondAttribute="centerX" constant="85" id="jk9-p2-mmc"/>
                             <constraint firstAttribute="centerY" secondItem="IDi-UI-ycv" secondAttribute="centerY" constant="-242" id="mcf-bg-fTT"/>
+                            <constraint firstAttribute="centerX" secondItem="jO4-GC-0zW" secondAttribute="centerX" constant="89" id="pht-ev-lfO"/>
                             <constraint firstAttribute="centerY" secondItem="MZR-FG-ZVi" secondAttribute="centerY" constant="-126.5" id="rpz-gR-ssu"/>
                             <constraint firstAttribute="centerY" secondItem="PyG-cc-b3S" secondAttribute="centerY" constant="-167.5" id="t7H-xQ-Y0v"/>
                             <constraint firstAttribute="centerX" secondItem="oot-uY-27G" secondAttribute="centerX" id="vTe-6r-1Ct"/>

@@ -89,22 +89,15 @@ class NewTrainingController: UIViewController, CLLocationManagerDelegate {
     //Si on action le bouton terminer
     @IBAction func terminer(sender: AnyObject)
     {
-        var i: Int = 0
-        var vitesseAdditionner : Float = 0
+
         //On stop l'actualisation des données de géolocalisées
         locationManager.stopUpdatingLocation()
         timer.invalidate()
         
-        for i in 1 ... vitesseList.count
-        {
-            vitesseAdditionner += vitesseList[i - 1 ]
-            
-            if (vitesseMax < vitesseList[i - 1])
-            {
-                vitesseMax = vitesseList[i - 1]
-            }
-        }
+
         
+
+
     }
     
     override func viewDidLoad() {
@@ -238,6 +231,8 @@ class NewTrainingController: UIViewController, CLLocationManagerDelegate {
         //VITESSE
         vitesse = (manager.location.speed.description as NSString).floatValue * 1.6093
         lbl_Vitesse.text = "\(vitesse) Km/h"
+        vitesseList.append(vitesse)
+        
         
         
     }
@@ -249,17 +244,43 @@ class NewTrainingController: UIViewController, CLLocationManagerDelegate {
         return (from.distanceFromLocation(to).description as NSString).floatValue * 0.001
     }
     
+    func CalculVitesse()
+    {
+        var i: Int = 0
+        var vitesseAdditionner : Float = 0
+        
+        for i in 0 ... (vitesseList.count - 1)
+        {
+            vitesseAdditionner += vitesseList[i]
+            
+            if (vitesseMax < vitesseList[i])
+            {
+                vitesseMax = vitesseList[i]
+            }
+        }
+        
+        //Calcule de la moyenne
+        vitesseMoy = (vitesseAdditionner / Float(vitesseList.count))
+        
+        //Arrondie les deux variables de vitesse
+        vitesseMoy = (round(1000 * vitesseMoy) / 1000)
+        vitesseMax = (round(1000 * vitesseMax) / 1000)
+    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         
         if(segue.identifier == "Enregistrement")
         {
+           CalculVitesse()
+            
             var destViewController : ViewEnregistrement = segue.destinationViewController as ViewEnregistrement
             destViewController.tempsText = AffichageChrono(heure, minIn: min, secIn: sec)
             destViewController.distanceText = "\(distance)"
-            destViewController.vitesseText = "\(vitesse)"
+            destViewController.vitesseText = "\(vitesseMoy) Km/h"
+            destViewController.vitesseMaxText = "\(vitesseMax) Km/h"
             
         }
     }
+    
 }

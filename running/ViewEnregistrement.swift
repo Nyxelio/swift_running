@@ -39,6 +39,7 @@ class ViewEnregistrement: UIViewController {
         lbl_Temps.text = tempsText
         lbl_distance.text = distanceText
         lbl_vitesse.text = vitesseText
+        lbl_vitesseMax.text = vitesseMaxText
         
     }
     @IBAction func Enregistrer(sender: UIButton) {
