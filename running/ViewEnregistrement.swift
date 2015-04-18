@@ -24,12 +24,14 @@ class ViewEnregistrement: UIViewController {
     @IBOutlet weak var lbl_distance: UILabel!
     @IBOutlet weak var lbl_vitesse: UILabel!
     @IBOutlet weak var status: UILabel!
+    @IBOutlet weak var lbl_vitesseMax: UILabel!
     
     //Variables qui vont recevoir les données de la fenetre précedante
     var tempsText = String()
     var distanceText = String()
     var vitesseText = String()
     var tabCoordonnées :[CLLocationCoordinate2D] = []
+    var vitesseMaxText = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +39,7 @@ class ViewEnregistrement: UIViewController {
         lbl_Temps.text = tempsText
         lbl_distance.text = distanceText
         lbl_vitesse.text = vitesseText
+        
     }
     @IBAction func Enregistrer(sender: UIButton) {
         

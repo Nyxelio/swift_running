@@ -42,6 +42,9 @@ class NewTrainingController: UIViewController, CLLocationManagerDelegate {
     
     //Variable qui récupere la vitesse
     var vitesse:Float=0
+    var vitesseList:[Float] = []
+    var vitesseMax:Float = 0
+    var vitesseMoy:Float = 0
     
     //Si le bouton démarrer est actionné
     @IBAction func GoTimer(sender: UIButton)
@@ -86,10 +89,21 @@ class NewTrainingController: UIViewController, CLLocationManagerDelegate {
     //Si on action le bouton terminer
     @IBAction func terminer(sender: AnyObject)
     {
+        var i: Int = 0
+        var vitesseAdditionner : Float = 0
         //On stop l'actualisation des données de géolocalisées
         locationManager.stopUpdatingLocation()
         timer.invalidate()
-        //self.performSegueWithIdentifier("Enregistrement", sender: sender)
+        
+        for i in 1 ... vitesseList.count
+        {
+            vitesseAdditionner += vitesseList[i - 1 ]
+            
+            if (vitesseMax < vitesseList[i - 1])
+            {
+                vitesseMax = vitesseList[i - 1]
+            }
+        }
         
     }
     

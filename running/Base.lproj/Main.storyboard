@@ -236,13 +236,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MZR-FG-ZVi">
-                                <rect key="frame" x="187" y="425" width="72" height="21"/>
+                                <rect key="frame" x="187" y="416" width="72" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vitesse:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PyG-cc-b3S">
-                                <rect key="frame" x="187" y="476" width="60" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Vitesse moyenne:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PyG-cc-b3S">
+                                <rect key="frame" x="187" y="457" width="145" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -255,13 +255,13 @@
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbP-y3-4Uc">
-                                <rect key="frame" x="353" y="425" width="42" height="21"/>
+                                <rect key="frame" x="353" y="416" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TsL-uM-dEx">
-                                <rect key="frame" x="353" y="476" width="42" height="21"/>
+                                <rect key="frame" x="353" y="457" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -290,33 +290,47 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Vitesse max:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aCa-2y-QRM">
+                                <rect key="frame" x="187" y="492" width="106" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FYJ-Th-5TZ">
+                                <rect key="frame" x="353" y="492" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="AmN-IW-4cE" firstAttribute="top" secondItem="Sxb-UT-1gN" secondAttribute="bottom" constant="55" id="1c0-Lr-6Wj"/>
+                            <constraint firstAttribute="centerX" secondItem="PyG-cc-b3S" secondAttribute="centerX" constant="40.5" id="4he-2Q-F6u"/>
+                            <constraint firstAttribute="centerY" secondItem="sbP-y3-4Uc" secondAttribute="centerY" constant="-126.5" id="4y0-6e-cSU"/>
                             <constraint firstAttribute="centerY" secondItem="jO4-GC-0zW" secondAttribute="centerY" constant="-242" id="5mr-Mq-g6f"/>
-                            <constraint firstAttribute="centerY" secondItem="PyG-cc-b3S" secondAttribute="centerY" constant="-186.5" id="6b7-68-odb"/>
                             <constraint firstAttribute="centerX" secondItem="IDi-UI-ycv" secondAttribute="centerX" constant="-74" id="6zf-hG-kkW"/>
                             <constraint firstAttribute="centerY" secondItem="2uP-Ru-9yg" secondAttribute="centerY" constant="-84.5" id="AJ1-s5-gF4"/>
                             <constraint firstAttribute="centerX" secondItem="jO4-GC-0zW" secondAttribute="centerX" id="BEj-QU-Ogb"/>
                             <constraint firstAttribute="centerX" secondItem="Wav-cP-kKp" secondAttribute="centerX" constant="-0.5" id="EzJ-eG-rDv"/>
                             <constraint firstAttribute="centerY" secondItem="oot-uY-27G" secondAttribute="centerY" constant="-215.5" id="H7V-zH-2Ew"/>
                             <constraint firstAttribute="centerX" secondItem="AmN-IW-4cE" secondAttribute="centerX" constant="-0.5" id="IAh-tr-fe6"/>
+                            <constraint firstAttribute="centerX" secondItem="aCa-2y-QRM" secondAttribute="centerX" constant="60" id="Jqm-PP-kUP"/>
                             <constraint firstAttribute="centerX" secondItem="TsL-uM-dEx" secondAttribute="centerX" constant="-74" id="LjN-P0-57y"/>
                             <constraint firstAttribute="centerY" secondItem="Wav-cP-kKp" secondAttribute="centerY" constant="261.5" id="NGO-41-BDc"/>
-                            <constraint firstAttribute="centerY" secondItem="MZR-FG-ZVi" secondAttribute="centerY" constant="-135.5" id="Plw-7C-kI5"/>
                             <constraint firstAttribute="centerX" secondItem="2uP-Ru-9yg" secondAttribute="centerX" constant="-74" id="Sri-eZ-sig"/>
                             <constraint firstAttribute="centerX" secondItem="sbP-y3-4Uc" secondAttribute="centerX" constant="-74" id="UMS-qQ-bCr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="AmN-IW-4cE" secondAttribute="trailing" constant="84" id="XWu-ON-TR8"/>
                             <constraint firstAttribute="centerY" secondItem="AmN-IW-4cE" secondAttribute="centerY" constant="84.5" id="Z5X-lx-oTr"/>
+                            <constraint firstAttribute="centerY" secondItem="aCa-2y-QRM" secondAttribute="centerY" constant="-202.5" id="ZA2-69-TKx"/>
                             <constraint firstItem="AmN-IW-4cE" firstAttribute="leading" secondItem="CD3-w2-3dv" secondAttribute="leadingMargin" constant="85" id="apA-jS-3NK"/>
+                            <constraint firstAttribute="centerY" secondItem="TsL-uM-dEx" secondAttribute="centerY" constant="-167.5" id="eTm-5e-vZP"/>
                             <constraint firstAttribute="centerY" secondItem="pW5-b0-2sR" secondAttribute="centerY" constant="-84.5" id="eYh-Oy-QbV"/>
-                            <constraint firstAttribute="centerY" secondItem="TsL-uM-dEx" secondAttribute="centerY" constant="-186.5" id="f6M-nH-Fme"/>
-                            <constraint firstAttribute="centerX" secondItem="PyG-cc-b3S" secondAttribute="centerX" constant="83" id="g7G-6I-9dz"/>
                             <constraint firstAttribute="centerX" secondItem="MZR-FG-ZVi" secondAttribute="centerX" constant="77" id="g9Q-fj-qPT"/>
-                            <constraint firstAttribute="centerY" secondItem="sbP-y3-4Uc" secondAttribute="centerY" constant="-135.5" id="jFx-wm-97d"/>
                             <constraint firstAttribute="centerX" secondItem="pW5-b0-2sR" secondAttribute="centerX" constant="85" id="jk9-p2-mmc"/>
                             <constraint firstAttribute="centerY" secondItem="IDi-UI-ycv" secondAttribute="centerY" constant="-242" id="mcf-bg-fTT"/>
+                            <constraint firstAttribute="centerY" secondItem="MZR-FG-ZVi" secondAttribute="centerY" constant="-126.5" id="rpz-gR-ssu"/>
+                            <constraint firstAttribute="centerY" secondItem="PyG-cc-b3S" secondAttribute="centerY" constant="-167.5" id="t7H-xQ-Y0v"/>
                             <constraint firstAttribute="centerX" secondItem="oot-uY-27G" secondAttribute="centerX" id="vTe-6r-1Ct"/>
                         </constraints>
                     </view>
@@ -324,6 +338,7 @@
                         <outlet property="lbl_Temps" destination="2uP-Ru-9yg" id="ZJd-8o-Xs6"/>
                         <outlet property="lbl_distance" destination="sbP-y3-4Uc" id="rDW-hp-B1q"/>
                         <outlet property="lbl_vitesse" destination="TsL-uM-dEx" id="VAV-aL-Sq9"/>
+                        <outlet property="lbl_vitesseMax" destination="FYJ-Th-5TZ" id="JTw-5g-xJq"/>
                         <outlet property="status" destination="oot-uY-27G" id="mkI-7a-bmD"/>
                     </connections>
                 </viewController>
