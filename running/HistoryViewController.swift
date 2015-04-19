@@ -35,6 +35,7 @@ class HistoryViewController: UITableViewController {
             for (var i=0; i < results.count; i++)
             {
                 let single_result = results[i]
+                let date = single_result.valueForKey("date") as NSDate
                 let duration = single_result.valueForKey("duration") as String
                 let distance = single_result.valueForKey("distance") as String
                 let speed = single_result.valueForKey("speed") as String
@@ -43,7 +44,11 @@ class HistoryViewController: UITableViewController {
                 
                 //println(locations)
 
-                trainingList.append("Parcours de \(distance) réalisé en \(duration)")
+                var dateFormatter:NSDateFormatter = NSDateFormatter()
+                dateFormatter.dateFormat = "dd/MM/yyyy"
+                var dateInFormat:String = dateFormatter.stringFromDate(date)
+                println(dateInFormat)
+                trainingList.append("\(dateInFormat): \(distance) (\(duration) secs)")
                 
             }
         }
