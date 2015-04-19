@@ -15,6 +15,8 @@ class NewTrainingController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var btn_Start: UIButton!
     @IBOutlet weak var lbl_Distance: UILabel!
     @IBOutlet weak var lbl_Vitesse: UILabel!
+    @IBOutlet weak var btn_démarrer: UIButton!
+    @IBOutlet weak var btn_terminer: UIButton!
     
     //Constante: temps initial
     let initSec = 60
@@ -64,7 +66,8 @@ class NewTrainingController: UIViewController, CLLocationManagerDelegate {
             btn_Start.setTitle("Pause", forState: .Normal)
             //On lance l'actulisation des données
             locationManager.startUpdatingLocation()
-            
+            btn_terminer.hidden = false
+            btn_démarrer.hidden = true
         }
         else
         {

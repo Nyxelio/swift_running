@@ -121,7 +121,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Far-Kt-hYG">
+                            <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Far-Kt-hYG">
                                 <rect key="frame" x="223" y="502" width="155" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -133,7 +133,7 @@
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="" id="G8N-au-ppf"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ig-Hx-ERe">
+                            <button hidden="YES" autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ig-Hx-ERe">
                                 <rect key="frame" x="223" y="415" width="155" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -144,18 +144,6 @@
                                 <connections>
                                     <action selector="terminer:" destination="HHb-eX-gSr" eventType="touchUpInside" id="ggD-aZ-Lh0"/>
                                     <segue destination="Pxt-vG-ZNB" kind="show" identifier="Enregistrement" id="jWy-KF-iza"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ufX-dF-d9W">
-                                <rect key="frame" x="223" y="328" width="155" height="30"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Démarrer">
-                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="GoTimer:" destination="HHb-eX-gSr" eventType="touchUpInside" id="kir-B8-8Gh"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Distance" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZIZ-qc-2ru">
@@ -176,6 +164,18 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ufX-dF-d9W">
+                                <rect key="frame" x="223" y="328" width="155" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Démarrer">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="GoTimer:" destination="HHb-eX-gSr" eventType="touchUpInside" id="kir-B8-8Gh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -201,6 +201,8 @@
                     </view>
                     <connections>
                         <outlet property="btn_Start" destination="ufX-dF-d9W" id="hXa-Q8-jxQ"/>
+                        <outlet property="btn_démarrer" destination="ufX-dF-d9W" id="nru-vp-gB8"/>
+                        <outlet property="btn_terminer" destination="3ig-Hx-ERe" id="PuQ-tS-Jus"/>
                         <outlet property="lbl_Distance" destination="cV3-xB-qo9" id="K0M-fj-6QV"/>
                         <outlet property="lbl_Timer" destination="OK7-H0-cEE" id="etU-4T-Y2u"/>
                         <outlet property="lbl_Vitesse" destination="WEP-or-aGd" id="XXU-4P-7G0"/>
