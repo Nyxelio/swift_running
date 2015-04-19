@@ -66,7 +66,7 @@ class NewTrainingController: UIViewController, CLLocationManagerDelegate, MKMapV
             work = true
             
             //Changer le texte du UIBouton
-            btn_Start.setTitle("Pause", forState: .Normal)
+            //btn_Start.setTitle("Pause", forState: .Normal)
             //On lance l'actulisation des données
             locationManager.startUpdatingLocation()
             btn_terminer.hidden = false
