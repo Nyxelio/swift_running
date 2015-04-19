@@ -10,11 +10,12 @@
         <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="distance" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="duration" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="maxspeed" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="speed" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="locations" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Location" inverseName="training" inverseEntity="Location" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Training" positionX="-63" positionY="-18" width="128" height="118"/>
         <element name="Location" positionX="-54" positionY="18" width="128" height="103"/>
+        <element name="Training" positionX="-63" positionY="-18" width="128" height="133"/>
     </elements>
 </model>

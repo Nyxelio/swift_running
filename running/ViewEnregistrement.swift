@@ -60,29 +60,44 @@ class ViewEnregistrement: UIViewController, MKMapViewDelegate {
             itineraire(tabCoordonnées[i - 2], coordonnee2: tabCoordonnées[i - 1])
         }*/
         
+
+        
     }
     @IBAction func Enregistrer(sender: UIButton) {
 
-        let entity =
+        let entityTraining =
         NSEntityDescription.entityForName("Training",
             inManagedObjectContext: managedObjectContext!)
         
-        /*let training = Training(entity: entityDescription!,
+        let training = Training(entity: entityTraining!,
             insertIntoManagedObjectContext: managedObjectContext)
         
         training.duration = tempsText
         training.distance = distanceText
         training.speed = vitesseText
-        */
-        
-        let options = NSManagedObject(entity: entity!,
-            insertIntoManagedObjectContext:managedObjectContext)
-        
-        options.setValue(tempsText, forKey: "duration")
-        options.setValue(distanceText, forKey: "distance")
-        options.setValue(vitesseText, forKey: "speed")
-        //options.setValue(tabCoordonnées, forKey: "locations")
+        training.maxspeed = vitesseMaxText
 
+       
+        var locationSet = NSMutableOrderedSet()
+        
+        let entityLocations =
+        NSEntityDescription.entityForName("Location",
+            inManagedObjectContext: managedObjectContext!)
+        
+        for location in tabCoordonnées {
+            let currentLocation = Location(entity: entityLocations!,
+                insertIntoManagedObjectContext:managedObjectContext)
+            
+            currentLocation.latitude = location.latitude
+            currentLocation.longitude = location.longitude
+            
+            locationSet.addObject(currentLocation)
+
+        }
+        
+        training.locations = locationSet
+        
+        
         var error: NSError?
         
         managedObjectContext?.save(&error)

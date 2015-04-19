@@ -39,8 +39,11 @@ class HistoryViewController: UITableViewController {
                 let distance = single_result.valueForKey("distance") as String
                 let speed = single_result.valueForKey("speed") as String
                 
+                let locations = single_result.valueForKeyPath("locations") as NSOrderedSet
                 
-                trainingList.append("Parcours de \(distance)km réalisé en \(duration)")
+                //println(locations)
+
+                trainingList.append("Parcours de \(distance) réalisé en \(duration)")
                 
             }
         }
