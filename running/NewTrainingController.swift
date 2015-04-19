@@ -245,22 +245,27 @@ class NewTrainingController: UIViewController, CLLocationManagerDelegate {
         var i: Int = 0
         var vitesseAdditionner : Float = 0
         
-        for i in 0 ... (vitesseList.count - 1)
+        if (vitesseList.count > 0)
         {
-            vitesseAdditionner += vitesseList[i]
             
-            if (vitesseMax < vitesseList[i])
+        
+            for i in 0 ... (vitesseList.count - 1)
             {
-                vitesseMax = vitesseList[i]
+                vitesseAdditionner += vitesseList[i]
+            
+                if (vitesseMax < vitesseList[i])
+                {
+                    vitesseMax = vitesseList[i]
+                }
             }
+        
+            //Calcule de la moyenne
+            vitesseMoy = (vitesseAdditionner / Float(vitesseList.count))
+        
+            //Arrondie les deux variables de vitesse
+            vitesseMoy = (round(1000 * vitesseMoy) / 1000)
+            vitesseMax = (round(1000 * vitesseMax) / 1000)
         }
-        
-        //Calcule de la moyenne
-        vitesseMoy = (vitesseAdditionner / Float(vitesseList.count))
-        
-        //Arrondie les deux variables de vitesse
-        vitesseMoy = (round(1000 * vitesseMoy) / 1000)
-        vitesseMax = (round(1000 * vitesseMax) / 1000)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

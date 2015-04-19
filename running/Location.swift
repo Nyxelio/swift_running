@@ -2,7 +2,7 @@
 //  Location.swift
 //  running
 //
-//  Created by Developer on 18/04/2015.
+//  Created by Developer on 19/04/2015.
 //  Copyright (c) 2015 Developer. All rights reserved.
 //
 
