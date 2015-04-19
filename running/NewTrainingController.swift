@@ -69,23 +69,6 @@ class NewTrainingController: UIViewController, CLLocationManagerDelegate {
             btn_terminer.hidden = false
             btn_démarrer.hidden = true
         }
-        else
-        {
-            if(work) //Le timer fonctionne
-            {
-                //On l'arrete et on change le texte du bouton
-                timer.invalidate()
-                work = false
-                btn_Start.setTitle("Continuer", forState: .Normal)
-            }
-            /*else
-            { //Si le timer ne fonctionne pas
-                //On le relance et on change le txt du bouton
-                TimerStart()
-                work = true
-                btn_Start.setTitle("Terminer", forState: .Normal)
-            }*/
-        }
     }
     
     
