@@ -35,7 +35,7 @@ class NewTrainingController: UIViewController, CLLocationManagerDelegate {
     let locationManager = CLLocationManager()
     
     //Tableau qui enregistre les position
-    var locationsList :[CLLocationManager] = []
+    var locationsList :[CLLocationCoordinate2D] = []
     
     //Variable qui recupere la distance
     var distance:Float = 0
@@ -196,14 +196,15 @@ class NewTrainingController: UIViewController, CLLocationManagerDelegate {
     
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
         
-        var locValue:CLLocationManager = manager
+        var locValue:CLLocationCoordinate2D = manager.location.coordinate
         
         //Stockage des données
         locationsList.append(locValue)
         
         //Affichage position de départ
-        var locDepart:CLLocationManager = locationsList[0]
+        var locDepart:CLLocationCoordinate2D = locationsList[0]
         
+
         
         //Affichage de la distance
         if(locationsList.count > 2)
@@ -211,7 +212,7 @@ class NewTrainingController: UIViewController, CLLocationManagerDelegate {
             
             distance += CalculDistance(locationsList[locationsList.count - 2], to: locValue)
             lbl_Distance.text  = "\((round(1000 * distance) / 1000)) Km"
-            
+
         }
         else
         {
@@ -232,11 +233,11 @@ class NewTrainingController: UIViewController, CLLocationManagerDelegate {
         
     }
     
-    func CalculDistance(from:CLLocationManager,to:CLLocationManager) -> Float
+    func CalculDistance(from:CLLocationCoordinate2D,to:CLLocationCoordinate2D) -> Float
     {
-        let from = CLLocation(latitude: from.location.coordinate.latitude, longitude: from.location.coordinate.longitude)
-        let to = CLLocation(latitude: to.location.coordinate.latitude, longitude: to.location.coordinate.longitude)
-        return (from.distanceFromLocation(to).description as NSString).floatValue / 1000
+        let from2 = CLLocation(latitude: from.latitude, longitude: from.longitude)
+        let to2 = CLLocation(latitude: to.latitude, longitude: to.longitude)
+        return (from2.distanceFromLocation(to2).description as NSString).floatValue / 1000
     }
     
     func CalculVitesse()

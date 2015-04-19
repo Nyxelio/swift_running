@@ -338,6 +338,7 @@
                         <outlet property="lbl_vitesse" destination="TsL-uM-dEx" id="VAV-aL-Sq9"/>
                         <outlet property="lbl_vitesseMax" destination="FYJ-Th-5TZ" id="JTw-5g-xJq"/>
                         <outlet property="status" destination="oot-uY-27G" id="mkI-7a-bmD"/>
+                        <outlet property="theMap" destination="AmN-IW-4cE" id="Q3b-Zp-Mg2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0sv-sR-R5k" userLabel="First Responder" sceneMemberID="firstResponder"/>
