@@ -30,7 +30,7 @@ class ViewEnregistrement: UIViewController {
     var tempsText = String()
     var distanceText = String()
     var vitesseText = String()
-    var tabCoordonnées :[CLLocationCoordinate2D] = []
+    var tabCoordonnées :[CLLocationManager] = []
     var vitesseMaxText = String()
     
     override func viewDidLoad() {
@@ -43,7 +43,7 @@ class ViewEnregistrement: UIViewController {
         
     }
     @IBAction func Enregistrer(sender: UIButton) {
-        
+
         let entity =
         NSEntityDescription.entityForName("Training",
             inManagedObjectContext: managedObjectContext!)
@@ -75,5 +75,16 @@ class ViewEnregistrement: UIViewController {
             status.text = "Enregistrement effectué"
             
         }
+    }
+    
+    func itineraire (coordonnee1: CLLocationManager, coordonnee2: CLLocationManager)
+    {
+        
+        /*
+        let c1 = myLocations[sourceIndex].coordinate
+        let c2 = myLocations[destinationIndex].coordinate
+        var a = [c1, c2]
+        var polyline = MKPolyline(coordinates: &a, count: a.count)
+        theMap.addOverlay(polyline)*/
     }
   }

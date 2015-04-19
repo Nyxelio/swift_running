@@ -35,7 +35,7 @@ class NewTrainingController: UIViewController, CLLocationManagerDelegate {
     let locationManager = CLLocationManager()
     
     //Tableau qui enregistre les position
-    var locationsList :[CLLocationCoordinate2D] = []
+    var locationsList :[CLLocationManager] = []
     
     //Variable qui recupere la distance
     var distance:Float = 0
@@ -196,13 +196,13 @@ class NewTrainingController: UIViewController, CLLocationManagerDelegate {
     
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
         
-        var locValue:CLLocationCoordinate2D = manager.location.coordinate
+        var locValue:CLLocationManager = manager
         
         //Stockage des données
         locationsList.append(locValue)
         
         //Affichage position de départ
-        var locDepart:CLLocationCoordinate2D = locationsList[0]
+        var locDepart:CLLocationManager = locationsList[0]
         
         
         //Affichage de la distance
@@ -232,10 +232,10 @@ class NewTrainingController: UIViewController, CLLocationManagerDelegate {
         
     }
     
-    func CalculDistance(from:CLLocationCoordinate2D,to:CLLocationCoordinate2D) -> Float
+    func CalculDistance(from:CLLocationManager,to:CLLocationManager) -> Float
     {
-        let from = CLLocation(latitude: from.latitude, longitude: from.longitude)
-        let to = CLLocation(latitude: to.latitude, longitude: to.longitude)
+        let from = CLLocation(latitude: from.location.coordinate.latitude, longitude: from.location.coordinate.longitude)
+        let to = CLLocation(latitude: to.location.coordinate.latitude, longitude: to.location.coordinate.longitude)
         return (from.distanceFromLocation(to).description as NSString).floatValue / 1000
     }
     
