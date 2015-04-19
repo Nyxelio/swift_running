@@ -23,7 +23,6 @@ class ViewEnregistrement: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var lbl_Temps: UILabel!
     @IBOutlet weak var lbl_distance: UILabel!
     @IBOutlet weak var lbl_vitesse: UILabel!
-    @IBOutlet weak var status: UILabel!
     @IBOutlet weak var lbl_vitesseMax: UILabel!
     @IBOutlet weak var theMap: MKMapView!
     
@@ -103,13 +102,13 @@ class ViewEnregistrement: UIViewController, MKMapViewDelegate {
         
         managedObjectContext?.save(&error)
         
-        if let err = error {
+        /*if let err = error {
             status.text = err.localizedFailureReason
         } else {
             
             status.text = "Enregistrement effectué"
             
-        }
+        }*/
     }
     
     func itineraire (coordonnee1: CLLocationManager, coordonnee2: CLLocationManager)

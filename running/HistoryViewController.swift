@@ -47,7 +47,7 @@ class HistoryViewController: UITableViewController {
                 var dateFormatter:NSDateFormatter = NSDateFormatter()
                 dateFormatter.dateFormat = "dd/MM/yyyy"
                 var dateInFormat:String = dateFormatter.stringFromDate(date)
-                println(dateInFormat)
+                
                 trainingList.append("\(dateInFormat): \(distance) (\(duration) secs)")
                 
             }

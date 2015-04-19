@@ -1,63 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="HHb-eX-gSr">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="running" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VDy-1t-S1Z">
-                                <rect key="frame" x="160" y="146" width="250" height="44"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Démarer un nouvel entrainement">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="HHb-eX-gSr" kind="show" id="65V-YU-cak"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Running" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nrc-sw-slJ">
-                                <rect key="frame" x="251" y="28" width="98" height="45"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xdt-id-kBE">
-                                <rect key="frame" x="168" y="279" width="234" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Historique des entrainements">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="7A7-pL-gw1" kind="show" id="WWi-a5-SJP"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="centerY" secondItem="Xdt-id-kBE" secondAttribute="centerY" constant="6" id="5V6-2a-FOx"/>
-                            <constraint firstAttribute="centerY" secondItem="nrc-sw-slJ" secondAttribute="centerY" constant="249.5" id="Nio-c3-Fyg"/>
-                            <constraint firstAttribute="centerX" secondItem="Xdt-id-kBE" secondAttribute="centerX" constant="15" id="R4R-rI-uUB"/>
-                            <constraint firstAttribute="centerX" secondItem="nrc-sw-slJ" secondAttribute="centerX" id="Whf-kr-BXy"/>
-                            <constraint firstAttribute="centerY" secondItem="VDy-1t-S1Z" secondAttribute="centerY" constant="132" id="eQ7-8x-6KW"/>
-                            <constraint firstAttribute="centerX" secondItem="VDy-1t-S1Z" secondAttribute="centerX" constant="15" id="taR-An-c2w"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="140" y="116"/>
-        </scene>
         <!--Historique-->
         <scene sceneID="Qgr-dW-qvF">
             <objects>
@@ -66,6 +13,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="Vl2-PS-EV0">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <items>
+                                <navigationItem title="Historique" id="WdK-KI-7z0">
+                                    <barButtonItem key="leftBarButtonItem" systemItem="add" id="1cq-Id-q5G">
+                                        <connections>
+                                            <segue destination="HHb-eX-gSr" kind="show" id="qmP-xB-W8M"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </navigationItem>
+                            </items>
+                        </navigationBar>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="HDd-4n-jgI">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -121,25 +81,12 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Far-Kt-hYG">
-                                <rect key="frame" x="223" y="502" width="155" height="30"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Retour">
-                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="" id="G8N-au-ppf"/>
-                                </connections>
-                            </button>
                             <button hidden="YES" autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ig-Hx-ERe">
-                                <rect key="frame" x="223" y="415" width="155" height="30"/>
+                                <rect key="frame" x="223" y="358" width="155" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Terminer">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="terminer:" destination="HHb-eX-gSr" eventType="touchUpInside" id="ggD-aZ-Lh0"/>
@@ -150,12 +97,6 @@
                                 <rect key="frame" x="156" y="204" width="88" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <color key="textColor" red="0.36500084918478259" green="0.36500084918478259" blue="0.36500084918478259" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Nouvel entraînement" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="czN-CC-TlU">
-                                <rect key="frame" x="125" y="20" width="350" height="27"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OK7-H0-cEE">
@@ -176,26 +117,36 @@
                                     <action selector="GoTimer:" destination="HHb-eX-gSr" eventType="touchUpInside" id="kir-B8-8Gh"/>
                                 </connections>
                             </button>
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B1P-6T-4tg">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Nouvel entraînement" id="BRw-xy-ieW">
+                                        <barButtonItem key="leftBarButtonItem" title="Historique" id="JUR-DJ-FLe">
+                                            <connections>
+                                                <segue destination="7A7-pL-gw1" kind="show" id="8zy-EY-bAJ"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="B1P-6T-4tg" secondAttribute="centerX" id="2pF-Yg-CL9"/>
                             <constraint firstAttribute="centerY" secondItem="ufX-dF-d9W" secondAttribute="centerY" constant="-43" id="2x4-sD-kqs"/>
                             <constraint firstAttribute="centerY" secondItem="WEP-or-aGd" secondAttribute="centerY" constant="29.5" id="3X5-W8-BA4"/>
                             <constraint firstAttribute="centerX" secondItem="3ig-Hx-ERe" secondAttribute="centerX" constant="-0.5" id="4cA-7b-1YC"/>
                             <constraint firstAttribute="centerY" secondItem="t0L-JQ-IN9" secondAttribute="centerY" constant="27.5" id="4mk-4G-hf4"/>
                             <constraint firstAttribute="centerX" secondItem="t0L-JQ-IN9" secondAttribute="centerX" constant="130" id="9Sl-9f-iBw"/>
                             <constraint firstAttribute="centerY" secondItem="OK7-H0-cEE" secondAttribute="centerY" constant="182" id="AeS-hV-Urz"/>
-                            <constraint firstAttribute="centerY" secondItem="Far-Kt-hYG" secondAttribute="centerY" constant="-217" id="D5C-Ka-5lV"/>
                             <constraint firstAttribute="centerX" secondItem="OK7-H0-cEE" secondAttribute="centerX" id="DE1-LI-ZmC"/>
                             <constraint firstAttribute="centerY" secondItem="ZIZ-qc-2ru" secondAttribute="centerY" constant="91.5" id="E9k-Te-7Uj"/>
-                            <constraint firstAttribute="centerX" secondItem="Far-Kt-hYG" secondAttribute="centerX" constant="-0.5" id="EvW-Oy-e9O"/>
                             <constraint firstAttribute="centerX" secondItem="ZIZ-qc-2ru" secondAttribute="centerX" constant="122" id="SXn-h7-CEg"/>
                             <constraint firstAttribute="centerX" secondItem="cV3-xB-qo9" secondAttribute="centerX" constant="-91.5" id="Wi8-k1-IbS"/>
-                            <constraint firstAttribute="centerY" secondItem="czN-CC-TlU" secondAttribute="centerY" constant="236.5" id="gUU-7O-W4k"/>
                             <constraint firstAttribute="centerX" secondItem="WEP-or-aGd" secondAttribute="centerX" constant="-91.5" id="gre-2s-sYs"/>
                             <constraint firstAttribute="centerX" secondItem="ufX-dF-d9W" secondAttribute="centerX" constant="-0.5" id="hqA-oc-ahT"/>
+                            <constraint firstItem="B1P-6T-4tg" firstAttribute="leading" secondItem="pFl-7O-g70" secondAttribute="leadingMargin" constant="-16" id="j4N-lT-bH5"/>
                             <constraint firstAttribute="centerY" secondItem="cV3-xB-qo9" secondAttribute="centerY" constant="92.5" id="s4p-AP-PHb"/>
-                            <constraint firstAttribute="centerX" secondItem="czN-CC-TlU" secondAttribute="centerX" id="tCY-eh-wzf"/>
                             <constraint firstAttribute="centerY" secondItem="3ig-Hx-ERe" secondAttribute="centerY" constant="-130" id="ycc-Ij-2aX"/>
                         </constraints>
                     </view>
@@ -224,12 +175,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Synthèse de l'entraînement" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wav-cP-kKp">
-                                <rect key="frame" x="169" y="28" width="263" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temps:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pW5-b0-2sR">
                                 <rect key="frame" x="187" y="374" width="56" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -248,13 +193,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jO4-GC-0zW">
-                                <rect key="frame" x="179" y="527" width="64" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Retour">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbP-y3-4Uc">
                                 <rect key="frame" x="353" y="416" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -273,11 +211,8 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="AmN-IW-4cE">
-                                <rect key="frame" x="101" y="75" width="399" height="281"/>
-                            </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IDi-UI-ycv">
-                                <rect key="frame" x="337" y="527" width="74" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IDi-UI-ycv">
+                                <rect key="frame" x="263" y="541" width="74" height="30"/>
                                 <state key="normal" title="Enregistrer">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -285,12 +220,6 @@
                                     <action selector="Enregistrer:" destination="Pxt-vG-ZNB" eventType="touchUpInside" id="b6H-gv-Rt9"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oot-uY-27G">
-                                <rect key="frame" x="279" y="505" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FYJ-Th-5TZ">
                                 <rect key="frame" x="353" y="492" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -303,35 +232,47 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C5u-A0-Nlm">
+                                <rect key="frame" x="0.0" y="-6" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Synthèse de l'entraînement" id="4bD-fV-Ete">
+                                        <barButtonItem key="leftBarButtonItem" title="Retour" id="QBr-Je-UQh">
+                                            <connections>
+                                                <segue destination="HHb-eX-gSr" kind="show" id="qDc-c6-Szr"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="AmN-IW-4cE">
+                                <rect key="frame" x="0.0" y="38" width="600" height="282"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="PyG-cc-b3S" secondAttribute="centerX" constant="40.5" id="4he-2Q-F6u"/>
                             <constraint firstAttribute="centerY" secondItem="sbP-y3-4Uc" secondAttribute="centerY" constant="-126.5" id="4y0-6e-cSU"/>
-                            <constraint firstAttribute="centerY" secondItem="jO4-GC-0zW" secondAttribute="centerY" constant="-242" id="5mr-Mq-g6f"/>
                             <constraint firstAttribute="centerX" secondItem="IDi-UI-ycv" secondAttribute="centerX" constant="-74" id="6zf-hG-kkW"/>
                             <constraint firstAttribute="centerY" secondItem="2uP-Ru-9yg" secondAttribute="centerY" constant="-84.5" id="AJ1-s5-gF4"/>
-                            <constraint firstAttribute="centerX" secondItem="Wav-cP-kKp" secondAttribute="centerX" constant="-0.5" id="EzJ-eG-rDv"/>
-                            <constraint firstAttribute="centerY" secondItem="oot-uY-27G" secondAttribute="centerY" constant="-215.5" id="H7V-zH-2Ew"/>
+                            <constraint firstItem="C5u-A0-Nlm" firstAttribute="leading" secondItem="CD3-w2-3dv" secondAttribute="leadingMargin" constant="-16" id="Fz6-JH-f6s"/>
                             <constraint firstAttribute="centerX" secondItem="AmN-IW-4cE" secondAttribute="centerX" constant="-0.5" id="IAh-tr-fe6"/>
                             <constraint firstAttribute="centerX" secondItem="aCa-2y-QRM" secondAttribute="centerX" constant="60" id="Jqm-PP-kUP"/>
                             <constraint firstAttribute="centerX" secondItem="TsL-uM-dEx" secondAttribute="centerX" constant="-74" id="LjN-P0-57y"/>
-                            <constraint firstAttribute="centerY" secondItem="Wav-cP-kKp" secondAttribute="centerY" constant="261.5" id="NGO-41-BDc"/>
                             <constraint firstAttribute="centerY" secondItem="FYJ-Th-5TZ" secondAttribute="centerY" constant="-202.5" id="Qad-cf-Bkt"/>
                             <constraint firstAttribute="centerX" secondItem="2uP-Ru-9yg" secondAttribute="centerX" constant="-74" id="Sri-eZ-sig"/>
                             <constraint firstAttribute="centerX" secondItem="sbP-y3-4Uc" secondAttribute="centerX" constant="-74" id="UMS-qQ-bCr"/>
                             <constraint firstAttribute="centerY" secondItem="AmN-IW-4cE" secondAttribute="centerY" constant="84.5" id="Z5X-lx-oTr"/>
                             <constraint firstAttribute="centerY" secondItem="aCa-2y-QRM" secondAttribute="centerY" constant="-202.5" id="ZA2-69-TKx"/>
+                            <constraint firstAttribute="centerX" secondItem="C5u-A0-Nlm" secondAttribute="centerX" id="ZMK-MI-5D8"/>
                             <constraint firstAttribute="centerY" secondItem="TsL-uM-dEx" secondAttribute="centerY" constant="-167.5" id="eTm-5e-vZP"/>
                             <constraint firstAttribute="centerX" secondItem="FYJ-Th-5TZ" secondAttribute="centerX" constant="-74" id="eTr-59-r8f"/>
                             <constraint firstAttribute="centerY" secondItem="pW5-b0-2sR" secondAttribute="centerY" constant="-84.5" id="eYh-Oy-QbV"/>
+                            <constraint firstAttribute="centerX" secondItem="C5u-A0-Nlm" secondAttribute="centerX" id="f2h-IP-kwE"/>
                             <constraint firstAttribute="centerX" secondItem="MZR-FG-ZVi" secondAttribute="centerX" constant="77" id="g9Q-fj-qPT"/>
                             <constraint firstAttribute="centerX" secondItem="pW5-b0-2sR" secondAttribute="centerX" constant="85" id="jk9-p2-mmc"/>
                             <constraint firstAttribute="centerY" secondItem="IDi-UI-ycv" secondAttribute="centerY" constant="-242" id="mcf-bg-fTT"/>
-                            <constraint firstAttribute="centerX" secondItem="jO4-GC-0zW" secondAttribute="centerX" constant="89" id="pht-ev-lfO"/>
                             <constraint firstAttribute="centerY" secondItem="MZR-FG-ZVi" secondAttribute="centerY" constant="-126.5" id="rpz-gR-ssu"/>
                             <constraint firstAttribute="centerY" secondItem="PyG-cc-b3S" secondAttribute="centerY" constant="-167.5" id="t7H-xQ-Y0v"/>
-                            <constraint firstAttribute="centerX" secondItem="oot-uY-27G" secondAttribute="centerX" id="vTe-6r-1Ct"/>
                         </constraints>
                     </view>
                     <connections>
@@ -339,13 +280,15 @@
                         <outlet property="lbl_distance" destination="sbP-y3-4Uc" id="rDW-hp-B1q"/>
                         <outlet property="lbl_vitesse" destination="TsL-uM-dEx" id="VAV-aL-Sq9"/>
                         <outlet property="lbl_vitesseMax" destination="FYJ-Th-5TZ" id="JTw-5g-xJq"/>
-                        <outlet property="status" destination="oot-uY-27G" id="mkI-7a-bmD"/>
                         <outlet property="theMap" destination="AmN-IW-4cE" id="Q3b-Zp-Mg2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0sv-sR-R5k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="849" y="845"/>
+            <point key="canvasLocation" x="899" y="824"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="qDc-c6-Szr"/>
+    </inferredMetricsTieBreakers>
 </document>
