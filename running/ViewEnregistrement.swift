@@ -8,12 +8,12 @@
 
 import Foundation
 import UIKit
-import MapKit
+
 import CoreLocation
 import CoreData
+import MapKit
 
-
-class ViewEnregistrement: UIViewController, MKMapViewDelegate {
+class ViewEnregistrement: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
     let managedObjectContext =
     (UIApplication.sharedApplication().delegate
@@ -33,6 +33,9 @@ class ViewEnregistrement: UIViewController, MKMapViewDelegate {
     var tabCoordonnées :[CLLocationCoordinate2D] = []
     var vitesseMaxText = String()
     
+    let locationManager = CLLocationManager()
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         var i :Int
@@ -44,8 +47,22 @@ class ViewEnregistrement: UIViewController, MKMapViewDelegate {
         
         //Setup our Map View
         theMap.delegate = self
-        theMap.mapType = MKMapType.Satellite
+        theMap.mapType = MKMapType.Standard
         theMap.showsUserLocation = true
+        
+        
+        // For use in foreground
+        self.locationManager.requestAlwaysAuthorization()
+        
+        // For use in foreground
+        self.locationManager.requestWhenInUseAuthorization()
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            
+            
+        }
         
         //Centre mapView faire notre itinéraire
         let spanX = 0.007
@@ -53,13 +70,9 @@ class ViewEnregistrement: UIViewController, MKMapViewDelegate {
         var newRegion = MKCoordinateRegion(center: theMap.userLocation.coordinate, span: MKCoordinateSpanMake(spanX, spanY))
         theMap.setRegion(newRegion, animated: true)
         
-      //REvoir
-      /*  for i in 1 ... tabCoordonnées.count
-        {
-            itineraire(tabCoordonnées[i - 2], coordonnee2: tabCoordonnées[i - 1])
-        }*/
         
-        
+        var polyline = MKPolyline(coordinates: &tabCoordonnées, count: tabCoordonnées.count)
+        theMap.addOverlay(polyline)
         
     }
     @IBAction func Enregistrer(sender: UIButton) {
@@ -102,33 +115,26 @@ class ViewEnregistrement: UIViewController, MKMapViewDelegate {
         
         managedObjectContext?.save(&error)
         
-        /*if let err = error {
-            status.text = err.localizedFailureReason
-        } else {
-            
-            status.text = "Enregistrement effectué"
-            
-        }*/
+       
     }
     
-    func itineraire (coordonnee1: CLLocationManager, coordonnee2: CLLocationManager)
-    {
-        
-        let c1 = coordonnee1.location.coordinate
-        let c2 = coordonnee2.location.coordinate
-        var a = [c1, c2]
-        var polyline = MKPolyline(coordinates: &a, count: a.count)
-        theMap.addOverlay(polyline)
+   
+    
+    func mapView(mapView: MKMapView!, didUpdateUserLocation
+        userLocation: MKUserLocation!) {
+            mapView.centerCoordinate = userLocation.location.coordinate
     }
     
-    func mapView(mapView: MKMapView!, rendererForOverlay overlay: MKOverlay!) -> MKOverlayRenderer! {
+   
+    func mapView(mapView: MKMapView!, viewForOverlay overlay: MKOverlay!) -> MKOverlayRenderer! {
         
-        if overlay is MKPolyline {
-            var polylineRenderer = MKPolylineRenderer(overlay: overlay)
-            polylineRenderer.strokeColor = UIColor.blueColor()
-            polylineRenderer.lineWidth = 4
-            return polylineRenderer
+        if (overlay is MKPolyline) {
+            var pr = MKPolylineRenderer(overlay: overlay);
+            pr.strokeColor = UIColor.redColor().colorWithAlphaComponent(0.5);
+            pr.lineWidth = 5;
+            return pr;
         }
+        
         return nil
     }
   }

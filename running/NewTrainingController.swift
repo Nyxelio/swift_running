@@ -8,8 +8,9 @@
 
 import UIKit
 import CoreLocation
+import MapKit
 
-class NewTrainingController: UIViewController, CLLocationManagerDelegate {
+class NewTrainingController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
     @IBOutlet weak var lbl_Timer: UILabel!
     @IBOutlet weak var btn_Start: UIButton!
@@ -17,6 +18,8 @@ class NewTrainingController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var lbl_Vitesse: UILabel!
     @IBOutlet weak var btn_démarrer: UIButton!
     @IBOutlet weak var btn_terminer: UIButton!
+    
+    @IBOutlet weak var currentMap: MKMapView!
     
     //Constante: temps initial
     let initSec = 60
@@ -84,6 +87,12 @@ class NewTrainingController: UIViewController, CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        currentMap.delegate = self
+
+        currentMap.mapType = MKMapType.Standard
+        currentMap.showsUserLocation = true
+        
         // Do any additional setup after loading the view, typically from a nib.
         // Ask for Authorisation from the User.
         self.locationManager.requestAlwaysAuthorization()
@@ -272,5 +281,10 @@ class NewTrainingController: UIViewController, CLLocationManagerDelegate {
             
         }
     }
+    func mapView(mapView: MKMapView!, didUpdateUserLocation
+        userLocation: MKUserLocation!) {
+            mapView.centerCoordinate = userLocation.location.coordinate
+    }
+
     
 }

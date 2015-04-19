@@ -64,29 +64,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Vitesse" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t0L-JQ-IN9">
-                                <rect key="frame" x="376" y="204" width="72" height="23"/>
+                                <rect key="frame" x="371" y="155" width="72" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <color key="textColor" red="0.36500084918478259" green="0.36500084918478259" blue="0.36500084918478259" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0 km" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cV3-xB-qo9">
-                                <rect key="frame" x="156" y="249" width="75" height="23"/>
+                                <rect key="frame" x="151" y="200" width="75" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0 km/h" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WEP-or-aGd">
-                                <rect key="frame" x="371" y="249" width="83" height="23"/>
+                                <rect key="frame" x="366" y="200" width="83" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button hidden="YES" autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ig-Hx-ERe">
-                                <rect key="frame" x="223" y="358" width="155" height="30"/>
+                                <rect key="frame" x="218" y="309" width="155" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Terminer">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="terminer:" destination="HHb-eX-gSr" eventType="touchUpInside" id="ggD-aZ-Lh0"/>
@@ -94,19 +95,19 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Distance" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZIZ-qc-2ru">
-                                <rect key="frame" x="156" y="204" width="88" height="23"/>
+                                <rect key="frame" x="151" y="155" width="88" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <color key="textColor" red="0.36500084918478259" green="0.36500084918478259" blue="0.36500084918478259" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OK7-H0-cEE">
-                                <rect key="frame" x="225" y="97" width="150" height="42"/>
+                                <rect key="frame" x="225" y="65" width="150" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ufX-dF-d9W">
-                                <rect key="frame" x="223" y="328" width="155" height="30"/>
+                                <rect key="frame" x="218" y="279" width="155" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Démarrer">
@@ -129,31 +130,39 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="0yH-F4-Fg0">
+                                <rect key="frame" x="0.0" y="410" width="619" height="190"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="0yH-F4-Fg0" secondAttribute="trailing" constant="-35" id="1mJ-7X-OEh"/>
                             <constraint firstAttribute="centerX" secondItem="B1P-6T-4tg" secondAttribute="centerX" id="2pF-Yg-CL9"/>
                             <constraint firstAttribute="centerY" secondItem="ufX-dF-d9W" secondAttribute="centerY" constant="-43" id="2x4-sD-kqs"/>
                             <constraint firstAttribute="centerY" secondItem="WEP-or-aGd" secondAttribute="centerY" constant="29.5" id="3X5-W8-BA4"/>
-                            <constraint firstAttribute="centerX" secondItem="3ig-Hx-ERe" secondAttribute="centerX" constant="-0.5" id="4cA-7b-1YC"/>
                             <constraint firstAttribute="centerY" secondItem="t0L-JQ-IN9" secondAttribute="centerY" constant="27.5" id="4mk-4G-hf4"/>
                             <constraint firstAttribute="centerX" secondItem="t0L-JQ-IN9" secondAttribute="centerX" constant="130" id="9Sl-9f-iBw"/>
                             <constraint firstAttribute="centerY" secondItem="OK7-H0-cEE" secondAttribute="centerY" constant="182" id="AeS-hV-Urz"/>
                             <constraint firstAttribute="centerX" secondItem="OK7-H0-cEE" secondAttribute="centerX" id="DE1-LI-ZmC"/>
                             <constraint firstAttribute="centerY" secondItem="ZIZ-qc-2ru" secondAttribute="centerY" constant="91.5" id="E9k-Te-7Uj"/>
+                            <constraint firstAttribute="centerX" secondItem="0yH-F4-Fg0" secondAttribute="centerX" constant="-9.5" id="F1x-e1-3op"/>
                             <constraint firstAttribute="centerX" secondItem="ZIZ-qc-2ru" secondAttribute="centerX" constant="122" id="SXn-h7-CEg"/>
                             <constraint firstAttribute="centerX" secondItem="cV3-xB-qo9" secondAttribute="centerX" constant="-91.5" id="Wi8-k1-IbS"/>
+                            <constraint firstItem="3ig-Hx-ERe" firstAttribute="leading" secondItem="pFl-7O-g70" secondAttribute="leadingMargin" constant="202" id="aJc-Jh-i2x"/>
+                            <constraint firstItem="0yH-F4-Fg0" firstAttribute="top" secondItem="ezg-If-cs2" secondAttribute="bottom" constant="390" id="e3V-y9-cxI"/>
                             <constraint firstAttribute="centerX" secondItem="WEP-or-aGd" secondAttribute="centerX" constant="-91.5" id="gre-2s-sYs"/>
                             <constraint firstAttribute="centerX" secondItem="ufX-dF-d9W" secondAttribute="centerX" constant="-0.5" id="hqA-oc-ahT"/>
                             <constraint firstItem="B1P-6T-4tg" firstAttribute="leading" secondItem="pFl-7O-g70" secondAttribute="leadingMargin" constant="-16" id="j4N-lT-bH5"/>
+                            <constraint firstAttribute="centerY" secondItem="3ig-Hx-ERe" secondAttribute="centerY" constant="-24" id="ntx-io-7vJ"/>
                             <constraint firstAttribute="centerY" secondItem="cV3-xB-qo9" secondAttribute="centerY" constant="92.5" id="s4p-AP-PHb"/>
-                            <constraint firstAttribute="centerY" secondItem="3ig-Hx-ERe" secondAttribute="centerY" constant="-130" id="ycc-Ij-2aX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0yH-F4-Fg0" secondAttribute="trailing" constant="-35" id="yaa-gi-EmU"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="btn_Start" destination="ufX-dF-d9W" id="hXa-Q8-jxQ"/>
                         <outlet property="btn_démarrer" destination="ufX-dF-d9W" id="nru-vp-gB8"/>
                         <outlet property="btn_terminer" destination="3ig-Hx-ERe" id="PuQ-tS-Jus"/>
+                        <outlet property="currentMap" destination="0yH-F4-Fg0" id="Xma-CC-fc4"/>
                         <outlet property="lbl_Distance" destination="cV3-xB-qo9" id="K0M-fj-6QV"/>
                         <outlet property="lbl_Timer" destination="OK7-H0-cEE" id="etU-4T-Y2u"/>
                         <outlet property="lbl_Vitesse" destination="WEP-or-aGd" id="XXU-4P-7G0"/>
