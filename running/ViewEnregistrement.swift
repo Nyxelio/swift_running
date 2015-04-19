@@ -60,7 +60,7 @@ class ViewEnregistrement: UIViewController, MKMapViewDelegate {
             itineraire(tabCoordonnées[i - 2], coordonnee2: tabCoordonnées[i - 1])
         }*/
         
-
+        
         
     }
     @IBAction func Enregistrer(sender: UIButton) {
@@ -72,6 +72,7 @@ class ViewEnregistrement: UIViewController, MKMapViewDelegate {
         let training = Training(entity: entityTraining!,
             insertIntoManagedObjectContext: managedObjectContext)
         
+        training.date = NSDate()
         training.duration = tempsText
         training.distance = distanceText
         training.speed = vitesseText
